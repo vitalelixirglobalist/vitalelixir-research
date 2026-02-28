@@ -123,6 +123,16 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById("header-placeholder").innerHTML = data;
+
+            // 🔑 Initialize menu AFTER header loads
+            const menuBtn = document.querySelector('.menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('open');
+                });
+            }
         });
 
     fetch("floating-contact.html")
