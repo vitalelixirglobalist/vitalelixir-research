@@ -273,3 +273,56 @@ footer {
     padding: 0.4rem 0.8rem;
   }
 }
+/* =========================================
+   REUSABLE BACKGROUND IMAGE + OVERLAY SYSTEM
+========================================= */
+
+/* Base background section */
+.bg-cover {
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay layer */
+.bg-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Content above overlay */
+.bg-cover > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Overlay color variants ===== */
+
+/* Light overlay (70% white) */
+.overlay-light::before {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark overlay (60% dark) */
+.overlay-dark::before {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* Strong dark overlay */
+.overlay-dark-strong::before {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+/* ===== Optional height helpers ===== */
+.section-lg {
+  padding: 5rem 0;
+}
+
+.section-xl {
+  padding: 7rem 0;
+}
