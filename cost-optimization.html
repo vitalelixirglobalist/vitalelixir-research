@@ -1,1 +1,165 @@
-.
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Quick Cost Optimization Solution</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .cost-page {
+      padding: 5rem 0;
+    }
+
+    .cost-box {
+      max-width: 720px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 50px rgba(15,23,42,0.12);
+    }
+
+    .cost-box h1 {
+      margin-bottom: 0.8rem;
+      color: #0f172a;
+    }
+
+    .cost-box p {
+      color: #475569;
+      margin-bottom: 1.6rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.3rem;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 1rem;
+    }
+
+    .contact-grid {
+      margin-top: 2.2rem;
+    }
+
+    .contact-grid h2 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem;
+      border-radius: 999px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+    }
+
+    .wa { background:#25d366; }
+    .ig { background:#d62976; }
+    .fb { background:#1877f2; }
+    .tg { background:#0088cc; }
+    .mail { background:#64748b; }
+    .sms { background:#2563eb; }
+  </style>
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<main class="cost-page">
+  <div class="container">
+    <div class="cost-box">
+
+      <h1>Get Quick Cost Optimization Solution</h1>
+      <p>
+        Share a few details about your medication and location.  
+        Choose how you’d like to receive personalized cost insights.
+      </p>
+
+      <div class="form-group">
+        <label>Medication Name</label>
+        <input type="text" id="medication" placeholder="e.g. Ozempic, Eliquis, Cancer medication" />
+      </div>
+
+      <div class="form-group">
+        <label>Your Country</label>
+        <input type="text" id="country" placeholder="e.g. USA, UK, Australia" />
+      </div>
+
+      <div class="form-group">
+        <label>Purchase Status</label>
+        <select id="status">
+          <option value="Purchasing for the first time">Purchasing for the first time</option>
+          <option value="Already used before">Already used before</option>
+          <option value="No idea about current pricing">No idea about current pricing</option>
+        </select>
+      </div>
+
+      <div class="contact-grid">
+        <h2>Get Price Insight Via</h2>
+
+        <div class="icon-grid">
+          <button class="contact-btn wa" onclick="send('whatsapp')">WhatsApp</button>
+          <button class="contact-btn ig" onclick="send('instagram')">Instagram</button>
+          <button class="contact-btn fb" onclick="send('facebook')">Facebook</button>
+          <button class="contact-btn tg" onclick="send('telegram')">Telegram</button>
+          <button class="contact-btn sms" onclick="send('sms')">SMS</button>
+          <button class="contact-btn mail" onclick="send('email')">Email</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+function buildMessage() {
+  const med = document.getElementById("medication").value || "Not specified";
+  const country = document.getElementById("country").value || "Not specified";
+  const status = document.getElementById("status").value;
+
+  return `Hello,%0A%0AI am looking for cost optimization guidance.%0A%0AMedication: ${med}%0ACountry: ${country}%0APurchase status: ${status}%0A%0APlease guide me regarding availability and pricing.`;
+}
+
+function send(type) {
+  const msg = buildMessage();
+
+  const links = {
+    whatsapp: `https://wa.me/918275595850?text=${msg}`,
+    instagram: `https://ig.me/m/vitalelixirglobalist?text=${msg}`,
+    facebook: `https://m.me/vitalelixirglobalist?text=${msg}`,
+    telegram: `https://t.me/vitalelixirglobalist?text=${msg}`,
+    sms: `sms:+918275595850?&body=${msg}`,
+    email: `mailto:example@email.com?subject=Cost Optimization Consultation&body=${msg}`
+  };
+
+  window.open(links[type], "_blank");
+}
+</script>
+
+</body>
+</html>
