@@ -326,3 +326,16 @@ footer {
 .section-xl {
   padding: 7rem 0;
 }
+/* Additional social icons */
+.fab-icon.instagram {
+  background: linear-gradient(45deg,
+    #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.fab-icon.email {
+  background-color: #64748b; /* professional gray */
+}
+
+.fab-icon.facebook {
+  background-color: #1877f2;
+}
