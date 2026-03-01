@@ -422,3 +422,42 @@ footer {
   opacity: 0.9;
   margin-top: 0.15rem;       /* small spacing between lines */
 }
+/* =========================
+   TEAM SECTION STYLES
+========================= */
+
+.team-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.team-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.team-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.team-info {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.team-info h3 {
+  margin-bottom: 0.3rem;
+}
+
+.team-info p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.team-info a {
+  color: #e0f2fe;
+  text-decoration: underline;
+}
