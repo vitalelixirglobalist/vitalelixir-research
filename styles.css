@@ -388,3 +388,6 @@ footer {
     gap: 0.75rem;
   }
 }
+#our-team {
+  scroll-margin-top: 100px; /* adjust if header height changes */
+}
