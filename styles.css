@@ -461,3 +461,21 @@ footer {
   color: #e0f2fe;
   text-decoration: underline;
 }
+/* =========================
+   MULTI-LINE BUTTON FIX
+========================= */
+
+.btn {
+  flex-direction: column;   /* STACK text vertically */
+  text-align: center;
+  line-height: 1.25;
+}
+
+.btn-subtext {
+  display: block;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: inherit;           /* SAME COLOR as main text */
+  opacity: 0.95;            /* optional softness */
+  margin-top: 0.2rem;
+}
