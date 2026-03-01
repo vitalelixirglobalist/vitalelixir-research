@@ -123,12 +123,48 @@
         <h2>Get Price Insight Via</h2>
 
         <div class="icon-grid">
-          <button class="contact-btn wa" onclick="send('whatsapp')">WhatsApp</button>
-          <button class="contact-btn ig" onclick="send('instagram')">Instagram</button>
-          <button class="contact-btn fb" onclick="send('facebook')">Facebook</button>
-          <button class="contact-btn tg" onclick="send('telegram')">Telegram</button>
-          <button class="contact-btn sms" onclick="send('sms')">SMS</button>
-          <button class="contact-btn mail" onclick="send('email')">Email</button>
+          <!-- WhatsApp -->
+  <a class="fab-icon whatsapp" onclick="send('whatsapp')" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2a10 10 0 0 0-8.94 14.6L2 22l5.55-1.44A10 10 0 1 0 12 2Z"/>
+    </svg>
+  </a>
+         <!-- Instagram -->
+  <a class="fab-icon instagram" onclick="send('instagram')" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <rect x="4" y="4" width="16" height="16" rx="4"/>
+      <circle cx="12" cy="12" r="3.5"/>
+      <circle cx="17" cy="7" r="1" fill="currentColor"/>
+    </svg>
+  </a>
+          <!-- Facebook -->
+  <a class="fab-icon facebook" onclick="send('facebook')" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.2 3-3.2.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.3V12h2.5l-.4 3h-2.1v7A10 10 0 0 0 22 12Z"/>
+    </svg>
+  </a>
+
+  <!-- Telegram -->
+  <a class="fab-icon telegram" onclick="send('telegram')" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21.9 3.3L2.7 10.6c-.8.3-.8 1.4 0 1.7l4.8 1.7 1.8 5.2c.3.8 1.3.9 1.8.3l2.7-3.7 4.9 3.6c.6.4 1.4.1 1.6-.6l3.1-14.7c.2-.8-.6-1.4-1.5-1.1Z"/>
+    </svg>
+  </a>
+
+  <!-- SMS -->
+  <a class="fab-icon sms-primary" onclick="send('sms')" aria-label="SMS">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4 4h16a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2H8l-4 3.5V6a2 2 0 0 1 2-2Z"/>
+    </svg>
+  </a>
+
+  <!-- Email -->
+  <a class="fab-icon email" onclick="send('email')" aria-label="Email">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.2l-10 6.25L2 6.2Z"/>
+      <path d="M2 9v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9l-9.5 6a1 1 0 0 1-1 0Z"/>
+    </svg>
+  </a>
         </div>
       </div>
 
