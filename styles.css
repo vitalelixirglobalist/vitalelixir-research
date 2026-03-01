@@ -391,3 +391,18 @@ footer {
 #our-team {
   scroll-margin-top: 100px; /* adjust if header height changes */
 }
+/* =========================================
+   MULTI-LINE CTA BUTTON SUPPORT
+========================================= */
+
+.btn {
+  white-space: normal;          /* allow text to wrap */
+  text-align: center;           /* center multi-line text */
+  line-height: 1.25;            /* comfortable line spacing */
+  max-width: 260px;             /* controls when line breaks */
+  padding: 0.9rem 1.2rem;
+}
+.btn .small {
+  font-size: 0.85em;
+  opacity: 0.9;
+}
