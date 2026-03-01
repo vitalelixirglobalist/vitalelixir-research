@@ -406,3 +406,19 @@ footer {
   font-size: 0.85em;
   opacity: 0.9;
 }
+/* =========================================
+   MULTI-LINE CTA BUTTON TEXT CONTROL
+========================================= */
+
+.btn {
+  text-align: center;        /* center all text */
+  line-height: 1.25;
+}
+
+.btn .small {
+  display: block;            /* forces new line control */
+  font-size: 0.85em;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-top: 0.15rem;       /* small spacing between lines */
+}
