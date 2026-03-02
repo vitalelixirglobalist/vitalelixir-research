@@ -23,68 +23,76 @@
             </div>
         </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="form-wrap">
+      <section class="section">
+    <div class="container">
+        <div class="form-wrap">
 
-                    <form class="form-grid">
+            <form class="form-grid" 
+                  action="https://formsubmit.co/Kashyaksahu@vitalelixirglobalist.com" 
+                  method="POST" 
+                  enctype="multipart/form-data">
 
-                        <div>
-                            <label>Full Name</label>
-                            <input type="text" required>
-                        </div>
+                <!-- Hidden Professional Settings -->
+                <input type="hidden" name="_subject" value="New Consultation Request - Vital Elixir Globalist">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
 
-                        <div>
-                            <label>Email</label>
-                            <input type="email" required>
-                        </div>
+                <div>
+                    <label>Full Name</label>
+                    <input type="text" name="full_name" required>
+                </div>
 
-                        <div>
-                            <label>Country</label>
-                            <input type="text" required>
-                        </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
 
-                        <div>
-                            <label>Medication Name</label>
-                            <input type="text" required>
-                        </div>
+                <div>
+                    <label>Country</label>
+                    <input type="text" name="country" required>
+                </div>
 
-                        <div>
-                            <label>Are you currently prescribed?</label>
-                            <select required>
-                                <option value="">Select</option>
-                                <option>Yes</option>
-                                <option>No</option>
-                            </select>
-                        </div>
+                <div>
+                    <label>Medication Name</label>
+                    <input type="text" name="medication" required>
+                </div>
 
-                        <div>
-                            <label>Upload prescription (optional)</label>
-                            <input type="file" accept=".pdf,.jpg,.jpeg,.png">
-                        </div>
+                <div>
+                    <label>Are you currently prescribed?</label>
+                    <select name="prescribed" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
 
-                        <div>
-                            <label>Preferred contact method</label>
-                            <select>
-                                <option>Email</option>
-                                <option>Phone</option>
-                                <option>WhatsApp</option>
-                                <option>Telegram</option>
-                            </select>
-                        </div>
+                <div>
+                    <label>Upload prescription (optional)</label>
+                    <input type="file" name="prescription_file" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
 
-                        <div style="grid-column:1/-1">
-                            <label>Message</label>
-                            <textarea required></textarea>
-                        </div>
+                <div>
+                    <label>Preferred contact method</label>
+                    <select name="contact_method">
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>WhatsApp</option>
+                        <option>Telegram</option>
+                    </select>
+                </div>
 
-                        <div style="grid-column:1/-1">
-                            <button class="btn btn-primary" type="submit">
-                                Submit Consultation Request
-                            </button>
-                        </div>
+                <div style="grid-column:1/-1">
+                    <label>Message</label>
+                    <textarea name="message" required></textarea>
+                </div>
 
-                    </form>
+                <div style="grid-column:1/-1">
+                    <button class="btn btn-primary" type="submit">
+                        Submit Consultation Request
+                    </button>
+                </div>
+
+            </form>
 
                     <p class="small">
                         Privacy statement: your information is encrypted in transit where applicable,
