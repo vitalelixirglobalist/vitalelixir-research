@@ -490,3 +490,28 @@ footer {
     font-size: 0.8em;
   }
 }
+.process-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
+    gap:30px;
+}
+
+/* Make cards responsive on smaller screens */
+
+@media (max-width:1024px){
+    .process-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:600px){
+    .process-grid{
+        grid-template-columns: 1fr;
+    }
+}
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
