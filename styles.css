@@ -518,3 +518,47 @@ footer {
 .btn-row{
     gap:15px;
 }
+.markets-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.market-card{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.market-card img{
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.market-card p{
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Tablet */
+
+@media (max-width:1000px){
+    .markets-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+    .markets-grid{
+        grid-template-columns: 1fr;
+    }
+}
+.market-card{
+    padding:25px;
+}
