@@ -8,7 +8,6 @@
     <title>Terms of Service | Vital Elixir Globalist</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<div 
 <body>
 <div id="header-placeholder"></div>
 
@@ -71,15 +70,23 @@
                     <input type="file" name="prescription_file" accept=".pdf,.jpg,.jpeg,.png">
                 </div>
 
-                <div>
-                    <label>Preferred contact method</label>
-                    <select name="contact_method">
-                        <option>Email</option>
-                        <option>Phone</option>
-                        <option>WhatsApp</option>
-                        <option>Telegram</option>
-                    </select>
-                </div>
+<div>
+    <label>Preferred contact method</label>
+    <select name="contact_method" id="contactMethod" required>
+        <option value="">Select</option>
+        <option value="Email">Email</option>
+        <option value="Phone">Phone / Call</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="RCS">RCS Android Messaging</option>
+        <option value="iMessage">iMessage iPhone</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Telegram">Telegram</option>
+        <option value="Facebook">Facebook</option>
+    </select>
+</div>
+
+<!-- Dynamic Fields Container -->
+<div id="dynamicContactFields" style="grid-column:1/-1;"></div>
 
                 <div style="grid-column:1/-1">
                     <label>Message</label>
@@ -148,6 +155,84 @@
         .then(data => {
             document.getElementById("floating-placeholder").innerHTML = data;
         });
+</script>
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const contactMethod = document.getElementById("contactMethod");
+    const container = document.getElementById("dynamicContactFields");
+
+    const fields = {
+        Phone: {
+            label: "Enter your phone number",
+            type: "tel",
+            name: "phone_number",
+            placeholder: "+1 234 567 890"
+        },
+        WhatsApp: {
+            label: "Enter your WhatsApp number",
+            type: "tel",
+            name: "whatsapp_number",
+            placeholder: "+Country code + number"
+        },
+        RCS: {
+            label: "Enter your RCS mobile number",
+            type: "tel",
+            name: "rcs_number",
+            placeholder: "Android phone number"
+        },
+        iMessage: {
+            label: "Enter your iMessage number",
+            type: "tel",
+            name: "imessage_number",
+            placeholder: "iPhone number"
+        },
+        Instagram: {
+            label: "Enter your Instagram username",
+            type: "text",
+            name: "instagram_id",
+            placeholder: "@username"
+        },
+        Telegram: {
+            label: "Enter your Telegram username",
+            type: "text",
+            name: "telegram_id",
+            placeholder: "@username"
+        },
+        Facebook: {
+            label: "Enter your Facebook profile link or name",
+            type: "text",
+            name: "facebook_id",
+            placeholder: "Profile link or name"
+        }
+    };
+
+    contactMethod.addEventListener("change", function () {
+
+        container.innerHTML = ""; // Clear previous field
+
+        const selected = this.value;
+
+        if (fields[selected]) {
+
+            const fieldData = fields[selected];
+
+            const div = document.createElement("div");
+
+            div.innerHTML = `
+                <label>${fieldData.label}</label>
+                <input 
+                    type="${fieldData.type}" 
+                    name="${fieldData.name}" 
+                    placeholder="${fieldData.placeholder}" 
+                    required>
+            `;
+
+            container.appendChild(div);
+        }
+    });
+
+});
 </script>
         <script src="script.js"></script>
 </body>
